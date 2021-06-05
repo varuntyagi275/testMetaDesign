@@ -1,0 +1,29 @@
+<header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          
+                <mdb-form-control>
+                    <input mdbInput type="text" (keyup)='searchMethod($event)' [(ngModel)]="search" name="search" id="typeText" class="form-control form-control-lg" />
+                    <label mdbLabel class="form-label" for="typeText">Search</label>
+                  </mdb-form-control>
+                  <button type="button"  [routerLink]="['/add']" routerLinkActive="router-link-active"  class="btn btn-primary ms-auto">Add Employee</button>
+          
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+  
+     </header>

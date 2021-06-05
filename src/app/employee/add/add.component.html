@@ -1,0 +1,26 @@
+<div class="container-lg m-3">
+
+    <h2>{{id!=undefined?'Edit':'Add'}} Employee</h2>
+<form [formGroup]="employeeForm">
+
+    
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+        <input type="text" class="form-control"  formControlName="name" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" />
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Salary</span>
+        <input type="number" class="form-control"  formControlName="salary" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" />
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Age</span>
+        <input type="number" class="form-control"  formControlName="age" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" />
+    </div>
+   
+
+    <button type="submit" class="btn btn-light" [disabled]='employeeForm.invalid' (click)='save()'>{{id!=undefined?'Update':'Save'}}</button>
+</form>
+</div>
